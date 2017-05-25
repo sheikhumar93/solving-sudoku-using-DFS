@@ -1,6 +1,8 @@
 # Artificial Intelligence Nanodegree
 ## Introductory Project: Diagonal Sudoku Solver
 
+![](https://github.com/sheikhumar93/solving-sudoku-using-DFS/blob/master/Sudoku.gif)
+
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
 A: As Constraint Propagation is all about introducing local constraints in a space, in the case of Sudoku, thereby reducing the search space for a given problem. Naked Twins further helped with introducing these constraints along with Elimination and Only Choice. If in a unit there are only 2 boxes available that have the same values, we can safely say that only these two boxes can have these values (a constraint) and we can remove these digits from all the other boxes inside this unit reducing the search space and helping the agorithm solve the problem faster e.g. if in row 1 from A1-A9 if we have two boxes which can only take 2 values e.g. 2,3 we can say that only these boxes can have either 2 or 3 in which case we remove any instances of 2 or 3 from any other boxes in the same unit. In this way we reduce our search space in the next iteration of Depth First Search, and we can converge towards the solution one bit faster reducing the overall number of possibilities in our unsolved grid which is the main purpose of using DFS so that we do not have to brute force our way to finding a solution by using lots of computational power which is very expensive. Techniques like naked twins make our model more efficient. 
